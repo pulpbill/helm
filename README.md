@@ -10,7 +10,7 @@ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.s
 
 2. Create Tiller serviceaccount:
 ```
-kubectl --namespace kube-system create serviceaccount tiller 
+kubectl --namespace kube-system create serviceaccount tiller
 ```
 
 3. Bind the tiller serviceaccount to the Kubernetes cluster-admin role:
@@ -30,7 +30,7 @@ kubectl get pods --namespace kube-system | grep tiller
 
 Bonus track, set up tiller account at once, use it carefully:
 ```
-kubectl --namespace kube-system create serviceaccount tiller && kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller && helm init --service-account tiller
+kubectl --namespace kube-system create serviceaccount tiller && kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller && helm init --service-account tiller && helm init --service-account tiller
 ```
 
 What helm init means:
