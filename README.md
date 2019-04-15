@@ -1,4 +1,4 @@
-# helm
+# Helm
 How to use Helm and Helm charts
 
 ## HELM / Tiller
